@@ -18,22 +18,13 @@ class MyApp extends StatelessWidget {
       title: 'Close Checker',
       theme: ThemeData(
         useMaterial3: true,
-        primaryColor: Colors.white,
+        primaryColor: Colors.green,
         visualDensity: VisualDensity.adaptivePlatformDensity,
-        canvasColor: Colors.transparent,
-        highlightColor: Colors.transparent,
-        splashColor: Colors.transparent,
+        canvasColor: Colors.white,
+        highlightColor: Colors.white,
+        splashColor: Colors.white,
         fontFamily: 'Yusei_Magic',
       ),
     );
-  }
-}
-
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container();
   }
 }
