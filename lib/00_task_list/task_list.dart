@@ -39,6 +39,42 @@ class TaskListPage extends StatelessWidget {
                   label: 'Task 5 \n スタイル',
                   routeName: '/task5',
                 ),
+                _TaskButton(
+                  label: 'Task 6 \n 画像',
+                  routeName: '/task6',
+                ),
+                _TaskButton(
+                  label: 'Task 7 \n ボタン',
+                  routeName: '/task7',
+                ),
+                _TaskButton(
+                  label: 'Task 8 \n ウィジェットの引数',
+                  routeName: '/task8',
+                ),
+                _TaskButton(
+                  label: 'Task 9 \n ステートの基礎',
+                  routeName: '/task9',
+                ),
+                _TaskButton(
+                  label: 'Task 10 \n 画面遷移',
+                  routeName: '/task10',
+                ),
+                _TaskButton(
+                  label: 'Task 11 \n フォーム',
+                  routeName: '/',
+                ),
+                _TaskButton(
+                  label: 'Task 12 \n UI基礎（静的）',
+                  routeName: '/',
+                ),
+                _TaskButton(
+                  label: 'Task 13 \n UI基礎（動的）',
+                  routeName: '/',
+                ),
+                _TaskButton(
+                  label: 'Task 14 \n パッケージ',
+                  routeName: '/',
+                ),
               ],
             ),
           ),

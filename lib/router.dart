@@ -5,6 +5,11 @@ import 'package:flutter_beginner_learning/02_widget_area/explain.dart';
 import 'package:flutter_beginner_learning/03_line_up/explain.dart';
 import 'package:flutter_beginner_learning/04_scroll/explain.dart';
 import 'package:flutter_beginner_learning/05_style/explain.dart';
+import 'package:flutter_beginner_learning/06_image/explain.dart';
+import 'package:flutter_beginner_learning/07_button/explain.dart';
+import 'package:flutter_beginner_learning/08_params/explain.dart';
+import 'package:flutter_beginner_learning/09_state/explain.dart';
+import 'package:flutter_beginner_learning/10_navigator/explain.dart';
 import 'package:go_router/go_router.dart';
 
 final GoRouter router = GoRouter(
@@ -56,6 +61,46 @@ final GoRouter router = GoRouter(
           NoAnimationTransition(
         key: state.pageKey,
         child: const Task5(),
+      ),
+    ),
+    GoRoute(
+      path: '/task6',
+      pageBuilder: (BuildContext context, GoRouterState state) =>
+          NoAnimationTransition(
+        key: state.pageKey,
+        child: const Task6(),
+      ),
+    ),
+    GoRoute(
+      path: '/task7',
+      pageBuilder: (BuildContext context, GoRouterState state) =>
+          NoAnimationTransition(
+        key: state.pageKey,
+        child: const Task7(),
+      ),
+    ),
+    GoRoute(
+      path: '/task8',
+      pageBuilder: (BuildContext context, GoRouterState state) =>
+          NoAnimationTransition(
+        key: state.pageKey,
+        child: const Task8(),
+      ),
+    ),
+    GoRoute(
+      path: '/task9',
+      pageBuilder: (BuildContext context, GoRouterState state) =>
+          NoAnimationTransition(
+        key: state.pageKey,
+        child: const Task9(),
+      ),
+    ),
+    GoRoute(
+      path: '/task10',
+      pageBuilder: (BuildContext context, GoRouterState state) =>
+          NoAnimationTransition(
+        key: state.pageKey,
+        child: const Task10(),
       ),
     ),
   ],
