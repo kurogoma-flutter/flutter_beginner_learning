@@ -5,10 +5,9 @@ class Task2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // メディアクエリの設定
-    final mediaQuery = MediaQuery.of(context);
     // デバイスサイズを取得
-    final Size screenSize = mediaQuery.size;
+    final Size screenSize = MediaQuery.of(context).size;
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Task 2：領域'),
@@ -17,7 +16,7 @@ class Task2 extends StatelessWidget {
         child: Container(
           width: screenSize.width * 0.8,
           height: screenSize.height * 0.5,
-          color: Colors.blueAccent,
+          color: Colors.blueAccent.withOpacity(0.5),
           child: Center(
             child: Container(
               width: screenSize.width * 0.8 / 1.5,

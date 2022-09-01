@@ -1,63 +1,58 @@
 import 'package:flutter/material.dart';
 
-class Task9 extends StatelessWidget {
-  const Task9({Key? key}) : super(key: key);
+class Task9 extends StatefulWidget {
+  const Task9({super.key});
+
+  @override
+  State<Task9> createState() => _Task9State();
+}
+
+class _Task9State extends State<Task9> {
+  int _counter = 0;
+
+  void _incrementCounter() {
+    _counter++;
+  }
+
+  void _decrementCounter() {
+    setState(() {
+      _counter--;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Task 9：ステートの基礎'),
+        title: const Text('Task 9 : State'),
       ),
-      body: SingleChildScrollView(
+      body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const SizedBox(
-              height: 100,
-              width: double.infinity,
-              child: Text(
-                'テキストスタイル',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                  color: Color.fromARGB(255, 33, 149, 231),
-                ),
-              ),
-            ),
-            const Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Text('ボックススタイル'),
-            ),
-            Container(
-              width: 200,
-              height: 200,
-              decoration: const BoxDecoration(
-                color: Color.fromARGB(255, 33, 149, 231),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(40),
-                ),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black26,
-                    spreadRadius: 2,
-                    blurRadius: 4,
-                    offset: Offset(2, 5),
-                  ),
-                ],
-              ),
+            Text(
+              _counter.toString(),
+              style: const TextStyle(fontSize: 30),
             ),
             const SizedBox(height: 30),
-            const CircleAvatar(
-              maxRadius: 40,
-              backgroundColor: Colors.amber,
-              child: Text(
-                'A',
-                style: TextStyle(
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
+            Container(
+              margin: const EdgeInsets.symmetric(horizontal: 60),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  ElevatedButton(
+                    onPressed: () {
+                      _incrementCounter();
+                    },
+                    child: const Text('+1'),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      _decrementCounter();
+                    },
+                    child: const Text('-1'),
+                  ),
+                ],
               ),
             ),
           ],

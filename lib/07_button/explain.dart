@@ -6,61 +6,92 @@ class Task7 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
         title: const Text('Task 7：ボタン'),
       ),
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            const SizedBox(
-              height: 100,
-              width: double.infinity,
-              child: Text(
-                'テキストスタイル',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                  color: Color.fromARGB(255, 33, 149, 231),
-                ),
+        child: SizedBox(
+          width: MediaQuery.of(context).size.width,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              ElevatedButton(
+                onPressed: () {
+                  print('タップテスト');
+                },
+                child: const Text('ボタン'),
               ),
-            ),
-            const Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Text('ボックススタイル'),
-            ),
-            Container(
-              width: 200,
-              height: 200,
-              decoration: const BoxDecoration(
-                color: Color.fromARGB(255, 33, 149, 231),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(40),
-                ),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black26,
-                    spreadRadius: 2,
-                    blurRadius: 4,
-                    offset: Offset(2, 5),
+              ElevatedButton(
+                onPressed: () {
+                  print('タップテスト');
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.red,
+                  shape: const RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(10),
+                    ),
                   ),
-                ],
+                ),
+                child: const Padding(
+                  padding: EdgeInsets.all(10.0),
+                  child: Text(
+                    'ボタン',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
               ),
-            ),
-            const SizedBox(height: 30),
-            const CircleAvatar(
-              maxRadius: 40,
-              backgroundColor: Colors.amber,
-              child: Text(
-                'A',
-                style: TextStyle(
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
+              OutlinedButton(
+                onPressed: () {},
+                child: const Text('ボタン'),
+              ),
+              IconButton(
+                onPressed: () async {
+                  print('タップテスト');
+                },
+                icon: const Icon(
+                  Icons.add,
                   color: Colors.white,
                 ),
+                style: IconButton.styleFrom(
+                  backgroundColor: Colors.blue,
+                ),
               ),
-            ),
-          ],
+              IconButton(
+                onPressed: () async {
+                  print('タップテスト');
+                },
+                icon: const Icon(
+                  Icons.add,
+                  color: Colors.white,
+                  size: 50,
+                ),
+                style: IconButton.styleFrom(
+                  backgroundColor: Colors.blue,
+                ),
+              ),
+              GestureDetector(
+                onTap: () {},
+                child: Container(
+                  width: 100,
+                  height: 100,
+                  color: Colors.blue,
+                  child: const Center(
+                    child: Text(
+                      'タップ',
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );

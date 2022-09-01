@@ -14,15 +14,27 @@ class Task4 extends StatelessWidget {
           SizedBox(
             height: 200,
             width: double.infinity,
-            child: ListView.builder(
-              itemBuilder: (context, index) {
-                return Container(
+            child: ListView(
+              children: [
+                Container(
                   margin: const EdgeInsets.all(10),
                   width: 50,
                   height: 50,
                   color: Colors.blueAccent,
-                );
-              },
+                ),
+                Container(
+                  margin: const EdgeInsets.all(10),
+                  width: 50,
+                  height: 50,
+                  color: Colors.blueAccent,
+                ),
+                Container(
+                  margin: const EdgeInsets.all(10),
+                  width: 50,
+                  height: 50,
+                  color: Colors.blueAccent,
+                ),
+              ],
             ),
           ),
           SizedBox(
@@ -30,6 +42,7 @@ class Task4 extends StatelessWidget {
             width: double.infinity,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
+              itemCount: 10,
               itemBuilder: (context, index) {
                 return Container(
                   margin: const EdgeInsets.all(10),

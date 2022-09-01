@@ -46,12 +46,6 @@ class Task6 extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 30),
-                const CircleAvatar(
-                  maxRadius: 75,
-                  backgroundImage: NetworkImage(
-                    'https://user-images.githubusercontent.com/67848399/187871137-5bcf7fd7-b917-4f85-8095-18df6e75bbb6.png',
-                  ),
-                ),
               ],
             ),
           ),

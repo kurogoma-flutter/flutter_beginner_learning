@@ -16,8 +16,9 @@ class Task5 extends StatelessWidget {
               height: 100,
               width: double.infinity,
               child: Text(
-                'テキストスタイル',
+                'テキストスタイルテキストスタイルテキストスタイルテキストスタイルテキストスタイル',
                 textAlign: TextAlign.center,
+                overflow: TextOverflow.ellipsis,
                 style: TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
@@ -35,7 +36,7 @@ class Task5 extends StatelessWidget {
               decoration: const BoxDecoration(
                 color: Color.fromARGB(255, 33, 149, 231),
                 borderRadius: BorderRadius.all(
-                  Radius.circular(40),
+                  Radius.circular(20),
                 ),
                 boxShadow: [
                   BoxShadow(
