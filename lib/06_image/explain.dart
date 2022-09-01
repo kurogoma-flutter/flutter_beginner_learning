@@ -6,61 +6,55 @@ class Task6 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.cyanAccent,
       appBar: AppBar(
         title: const Text('Task 6：画像'),
       ),
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            const SizedBox(
-              height: 100,
-              width: double.infinity,
-              child: Text(
-                'テキストスタイル',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                  color: Color.fromARGB(255, 33, 149, 231),
+        child: Expanded(
+          child: Align(
+            alignment: Alignment.center,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const SizedBox(height: 30),
+                SizedBox(
+                  height: 150,
+                  width: 150,
+                  child: Image.asset('assets/sample.png'),
                 ),
-              ),
-            ),
-            const Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Text('ボックススタイル'),
-            ),
-            Container(
-              width: 200,
-              height: 200,
-              decoration: const BoxDecoration(
-                color: Color.fromARGB(255, 33, 149, 231),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(40),
-                ),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black26,
-                    spreadRadius: 2,
-                    blurRadius: 4,
-                    offset: Offset(2, 5),
+                const SizedBox(height: 30),
+                SizedBox(
+                  height: 150,
+                  width: 150,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Image.network(
+                      'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg',
+                      errorBuilder: (context, error, stackTrace) {
+                        return const Icon(Icons.error);
+                      },
+                    ),
                   ),
-                ],
-              ),
-            ),
-            const SizedBox(height: 30),
-            const CircleAvatar(
-              maxRadius: 40,
-              backgroundColor: Colors.amber,
-              child: Text(
-                'A',
-                style: TextStyle(
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
                 ),
-              ),
+                const SizedBox(height: 30),
+                const CircleAvatar(
+                  maxRadius: 75,
+                  backgroundImage: NetworkImage(
+                    'https://user-images.githubusercontent.com/67848399/187871137-5bcf7fd7-b917-4f85-8095-18df6e75bbb6.png',
+                  ),
+                ),
+                const SizedBox(height: 30),
+                const CircleAvatar(
+                  maxRadius: 75,
+                  backgroundImage: NetworkImage(
+                    'https://user-images.githubusercontent.com/67848399/187871137-5bcf7fd7-b917-4f85-8095-18df6e75bbb6.png',
+                  ),
+                ),
+              ],
             ),
-          ],
+          ),
         ),
       ),
     );
