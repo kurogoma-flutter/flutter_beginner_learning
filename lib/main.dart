@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       routeInformationParser: router.routeInformationParser,
       routerDelegate: router.routerDelegate,
       debugShowCheckedModeBanner: false,
-      title: 'Close Checker',
+      title: 'Flutter Beginner',
       theme: ThemeData(
         useMaterial3: true,
         primaryColor: Colors.green,
