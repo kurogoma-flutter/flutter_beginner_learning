@@ -10,6 +10,7 @@ import 'package:flutter_beginner_learning/07_button/explain.dart';
 import 'package:flutter_beginner_learning/08_params/explain.dart';
 import 'package:flutter_beginner_learning/09_state/explain.dart';
 import 'package:flutter_beginner_learning/10_navigator/explain.dart';
+import 'package:flutter_beginner_learning/11_form/explain.dart';
 import 'package:go_router/go_router.dart';
 
 final GoRouter router = GoRouter(
@@ -101,6 +102,14 @@ final GoRouter router = GoRouter(
           NoAnimationTransition(
         key: state.pageKey,
         child: const Task10(),
+      ),
+    ),
+    GoRoute(
+      path: '/task11',
+      pageBuilder: (BuildContext context, GoRouterState state) =>
+          NoAnimationTransition(
+        key: state.pageKey,
+        child: const Task11(),
       ),
     ),
   ],

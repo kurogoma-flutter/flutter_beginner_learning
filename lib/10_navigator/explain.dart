@@ -11,9 +11,11 @@ class Task10 extends StatelessWidget {
         title: const Text('Task 10：画面遷移'),
       ),
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            ElevatedButton(
+        child: SizedBox(
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height,
+          child: Center(
+            child: ElevatedButton(
               onPressed: () {
                 Navigator.push(
                   context,
@@ -23,8 +25,8 @@ class Task10 extends StatelessWidget {
                 );
               },
               child: const Text('課題1'),
-            )
-          ],
+            ),
+          ),
         ),
       ),
     );

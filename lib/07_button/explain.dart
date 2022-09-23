@@ -19,13 +19,13 @@ class Task7 extends StatelessWidget {
             children: [
               ElevatedButton(
                 onPressed: () {
-                  print('タップテスト');
+                  debugPrint('タップテスト');
                 },
                 child: const Text('ボタン'),
               ),
               ElevatedButton(
                 onPressed: () {
-                  print('タップテスト');
+                  debugPrint('タップテスト');
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.red,
@@ -51,7 +51,7 @@ class Task7 extends StatelessWidget {
               ),
               IconButton(
                 onPressed: () async {
-                  print('タップテスト');
+                  debugPrint('タップテスト');
                 },
                 icon: const Icon(
                   Icons.add,
@@ -63,7 +63,7 @@ class Task7 extends StatelessWidget {
               ),
               IconButton(
                 onPressed: () async {
-                  print('タップテスト');
+                  debugPrint('タップテスト');
                 },
                 icon: const Icon(
                   Icons.add,
